@@ -6,31 +6,53 @@
     <title>Apple Pie Recipe</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        /* Styling for the container that holds the image and the text */
+        /* Container for the image and the text */
         .image-container {
             position: relative;
             width: 100%;  /* Make the container full width */
-            height: auto;
+            height: 400px; /* Set a fixed height for the image */
         }
 
-        /* Styling for the image */
+        /* Stretch the image horizontally */
         .image-container img {
-            width: 70%;      /* Set the image width to 70% of the container */
-            height: auto;    /* Maintain aspect ratio */
-            margin: 0 auto;  /* Center the image horizontally */
-            display: block;  /* Makes the image a block element to respect margin auto */
+            width: 100%;     /* Stretch the image to 100% of the container width */
+            height: 400px;   /* Set a fixed height for the image */
+            object-fit: cover; /* Ensure the image covers the entire space */
         }
 
-        /* Styling for the title (h1) */
+        /* Title (h1) styling */
         .image-container h1 {
-            position: absolute;       /* Position absolutely within the container */
-            top: 50%;                 /* Vertically center */
-            left: 50%;                /* Horizontally center */
-            transform: translate(-50%, -50%); /* Adjust for perfect centering */
-            color: white;             /* White text color */
-            font-size: 3rem;          /* Adjust font size */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds shadow for readability */
+            position: absolute;      /* Position absolutely within the container */
+            top: 50%;                /* Vertically center the text */
+            left: 50%;               /* Horizontally center the text */
+            transform: translate(-50%, -50%); /* Fine-tune centering */
+            color: white;            /* Make text white */
+            font-size: 8rem;         /* Adjust font size */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: text shadow for readability */
         }
+
+        /* Center the second image */
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%; 
+            margin-top: 30px; 
+        }
+
+        
+        .full-size-div {
+            padding: 20px;
+        }
+
+        .full-size-div h2 {
+            margin-top: 40px;
+        }
+
+        .full-size-div ul, .full-size-div ol {
+            margin-left: 40px; 
+        }
+
     </style>
 </head>
 <body>
@@ -40,11 +62,14 @@
         <img src="images/Apple.jpg" alt="Apple Pie">
         <h1>Apple Pie</h1>
     </div>
+    
+    <p>This was my grandmother's apple pie recipe. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions. I hope it becomes one of your favorites as well!</p>
+    
+    <!-- Second image centered -->
+    <img src="images/cooking-info.png" alt="cooking-info" class="center-image">
 
     <div class="full-size-div">
-        <p>This was my grandmother's apple pie recipe. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions. I hope it becomes one of your favorites as well!</p>
-        
-        <h2>Ingredients:</h2>
+        <h2>Ingredients:</h4>
         <ul>
             <li>1 recipe pastry for a 9-inch double crust pie</li>
             <li>1/2 cup unsalted butter</li>
@@ -55,7 +80,10 @@
             <li>8 Granny Smith apples - peeled, cored, and sliced</li>
         </ul>
 
-        <h2>Directions:</h2>
+        <!-- Correctly apply 'h4' class to an appropriate tag -->
+        <img src="images/recipe-info.png" alt="recipe-info" class="center-image">
+        
+        <h2>Directions</h2>
         <ol>
             <li>Preheat oven to 425 degrees F (220 degrees C).</li>
             <li>Melt the butter in a saucepan.</li>
@@ -68,9 +96,8 @@
             <li>Bake 15 minutes in the preheated oven.</li>
             <li>Reduce the temperature to 350 degrees F (175 degrees C).</li>
             <li>Continue baking for 35 to 45 minutes, until apples are soft.</li>
-        </ol>
+        </ol> 
     </div>
 
 </body>
 </html>
-
